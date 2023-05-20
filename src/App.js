@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/navbar/Navbar'
+
+import Stressometer from './Containers/Stressometer/Stressometer';
+import DoctorAI from './Containers/DoctorAI/DoctorAI';
+import Recommend from './Containers/Recommend/Recommend';
+// import Blog from './Blog';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/stressometer" element={<Stressometer />} />
+        <Route path="/recommend" element={<Recommend />} />
+        <Route path="/doctorai" element={<DoctorAI />} />
+        {/* <Route path="/blog" element={<Blog />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+export default App; 
