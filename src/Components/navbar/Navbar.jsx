@@ -18,6 +18,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
+import logo from '../../Assets/logo.png';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -25,11 +26,15 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-links">
+        <div className='navbar-links_logo'>
+          <img src={logo} alt="logo" />
+        </div>
         <div className="navbar-links_container">
-          <Link to="/stressometer" className="nav-link">Stressometer</Link>
-          <Link to="/doctorai" className="nav-link">DoctorAI</Link>
-          <Link to="/recommend" className="nav-link">Recommend a Psychiatrist</Link>
-          <Link to="/blog" className="nav-link">Blog</Link>
+          <p><Link to="/" className='nav-link'>Home</Link></p>
+          <p><Link to="/stressometer" className="nav-link">Stressometer</Link></p>
+          <p><Link to="/doctorai" className="nav-link">DoctorAI</Link></p>
+          <p><Link to="/recommend" className="nav-link">Recommend a Psychiatrist</Link></p>
+          <p><Link to="/blog" className="nav-link">Blog</Link></p>
         </div>
       </div>
       <div className="navbar-menu">
