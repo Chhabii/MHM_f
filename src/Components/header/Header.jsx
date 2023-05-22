@@ -1,5 +1,5 @@
 
-import ai from '../../Assets/brainwheadphone.png';
+import ai from '../../Assets/brainwheadphone-.png';
 import './header.css';
 import { useNavigate } from 'react-router-dom';
 

@@ -57,7 +57,7 @@ const Form = styled('form')({
   justifyContent: "center",
   margin: "20px 10px",
   gap: "15px",
-  backgroundColor:"#040C18",
+  backgroundColor:"white",
   border: "1px solid white",
   margin: "25px",
   borderRadius:"8px",

@@ -8,6 +8,8 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: capitalize;
+ z-index: 9999;
+ position: relative;
     
   }
   

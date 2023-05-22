@@ -26,9 +26,10 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-links">
-        <div className='navbar-links_logo'>
+        
+        <Link to="/" className='navbar-links_logo'>
           <img src={logo} alt="logo" />
-        </div>
+        </Link>
         <div className="navbar-links_container">
           <p><Link to="/" className='nav-link'>Home</Link></p>
           <p><Link to="/stressometer" className="nav-link">Stressometer</Link></p>

@@ -1,13 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.8810e86e.css",
-    "main.js": "/static/js/main.37d33219.js",
+    "main.css": "/static/css/main.6f6ab804.css",
+    "main.js": "/static/js/main.bc03ba77.js",
+    "static/media/headache.webp": "/static/media/headache.122b3acadcf2a5e63dfb.webp",
+    "static/media/brainwheadphone-.png": "/static/media/brainwheadphone-.de54e3355997a1ead49a.png",
+    "static/media/anxietylevel.png": "/static/media/anxietylevel.66ace1ff1c428c17799b.png",
+    "static/media/mentalhealth.avif": "/static/media/mentalhealth.7b48d95ea3a22673a16c.avif",
+    "static/media/noise.jpg": "/static/media/noise.7e45f5dfa5ba56daf219.jpg",
+    "static/media/basicneed.jpg": "/static/media/basicneed.8308a8f32f60de705a5c.jpg",
+    "static/media/extraactivity.avif": "/static/media/extraactivity.9c5036033aaf6f107709.avif",
+    "static/media/depression1.jpg": "/static/media/depression1.b96e1ad33fb13f556342.jpg",
+    "static/media/sleepquality.jpg": "/static/media/sleepquality.85c7fcf68513085f7978.jpg",
+    "static/media/bullying.avif": "/static/media/bullying.b335a2bb5e003c5b02ba.avif",
+    "static/media/futurecareer.avif": "/static/media/futurecareer.b0dce22127f9ff224b7c.avif",
+    "static/media/socialsupport.avif": "/static/media/socialsupport.15ffaea01cba838d5700.avif",
+    "static/media/studyload.avif": "/static/media/studyload.0e4819209b2fb4fe199f.avif",
+    "static/media/breathingproblem.avif": "/static/media/breathingproblem.eac924ca1746540af15c.avif",
+    "static/media/academicperformance.avif": "/static/media/academicperformance.992bb4f830fd291978cc.avif",
+    "static/media/teacherstudentrelationship.avif": "/static/media/teacherstudentrelationship.139b40b4f0fe227b3d90.avif",
+    "static/media/livingcondition.jpg": "/static/media/livingcondition.dfd12cfe7b031d8f4eca.jpg",
+    "static/media/logo.png": "/static/media/logo.24836a7274aa17cde4c7.png",
+    "static/media/bloodpressure.webp": "/static/media/bloodpressure.6eb89e620c63d24bdbf0.webp",
+    "static/media/selfesteem.jpg": "/static/media/selfesteem.2744aa5372778dd32cc5.jpg",
+    "static/media/peerpressure.avif": "/static/media/peerpressure.72ca57815d33e21a3d94.avif",
+    "static/media/safety.avif": "/static/media/safety.07a377c31e5e5cb173a6.avif",
     "index.html": "/index.html",
-    "main.8810e86e.css.map": "/static/css/main.8810e86e.css.map",
-    "main.37d33219.js.map": "/static/js/main.37d33219.js.map"
+    "main.6f6ab804.css.map": "/static/css/main.6f6ab804.css.map",
+    "main.bc03ba77.js.map": "/static/js/main.bc03ba77.js.map"
   },
   "entrypoints": [
-    "static/css/main.8810e86e.css",
-    "static/js/main.37d33219.js"
+    "static/css/main.6f6ab804.css",
+    "static/js/main.bc03ba77.js"
   ]
 }
