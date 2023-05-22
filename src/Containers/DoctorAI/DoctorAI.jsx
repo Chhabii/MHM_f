@@ -5,13 +5,15 @@ import TypingIndicator from "../../Components/TypingIndicator/TypingIndicator";
 // import './doctorai.css'
 
 const ChatContainer = styled(Box)({
-  border: "1px solid lightblue",
-  margin: "5px",
+  border: "1px solid white",
+  margin: "25px",
+  borderRadius:"20px",
   padding: "20px",
   height: "400px",
   overflowY: "auto",
   display: "flex",
   flexDirection: "column",
+  backgroundColor:"#040C18",
   // backgroundColor: "black",
   gap: "15px",
   '&::-webkit-scrollbar': {
@@ -31,24 +33,38 @@ const ChatContainer = styled(Box)({
 const MessagePaper = styled(Paper)({
   padding: "10px",
   width: "fit-content"
+
 });
 
 const UserMessage = styled(MessagePaper)({
   alignSelf: "flex-end",
-  backgroundColor: "lightblue"
+  backgroundColor: "lightblue",
+  borderRadius:"20px",
+  textAlign:"justify"
 });
 
 const BotMessage = styled(MessagePaper)({
   alignSelf: "flex-start",
-  backgroundColor: "lightgreen"
+  backgroundColor: "lightgreen",
+  borderRadius:"20px",
+  textAlign:"justify"
 });
+
+
 
 const Form = styled('form')({
   display: "flex",
   justifyContent: "center",
   margin: "20px 10px",
-  gap: "15px"
+  gap: "15px",
+  backgroundColor:"#040C18",
+  border: "1px solid white",
+  margin: "25px",
+  borderRadius:"8px",
+  fontcolor:"white",
+  
 });
+
 
 
 
