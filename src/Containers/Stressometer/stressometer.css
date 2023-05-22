@@ -1,0 +1,68 @@
+.form-label{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border: solid 1px;
+    border-radius: 0px;
+    display: inline-flex;
+    
+}
+.poschange{
+  position: relative;
+}
+.step-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .step-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .step-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .step-form button[type="submit"] {
+    background-color: #28a745;
+  }
+  
+  .step-form button[type="button"] {
+    background-color: #6c757d;
+    margin-right: 10px;
+  }
+  
+  .prediction-result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .step-form{
+    position: block;
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-right: auto;
+  }
+  .txtclr {
+    
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-text);
+    position: absolute;
+    margin-left:-250px !important;
+    margin-right: 200px;
+    margin-top: 4rem;
+    text-align: justify;
+
+}

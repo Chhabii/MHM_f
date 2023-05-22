@@ -1,0 +1,37 @@
+.blog-container {
+  background-color: #19376D;
+
+    width: 45%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-container {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .blog-container {
+      width: 48%;
+    }
+  }
+  
+  .blog-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .blog-content {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .blog-author {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #888;
+  }
+  
