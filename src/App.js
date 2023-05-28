@@ -7,7 +7,7 @@ import Recommend from './Containers/Recommend/Recommend';
 import './App.css';
 import  Header  from '../src/Components/header/Header';
 
-// import Blog from './Blog';
+import Blog from './Containers/Blog/Blog';
 
 function App() {
   return (
@@ -23,7 +23,8 @@ function App() {
         <Route path="/stressometer"  element={<Stressometer />} />
         <Route path="/recommend" element={<Recommend />} />
         <Route path="/doctorai" element={<DoctorAI />} />
-        {/* <Route path="/blog" element={<Blog />} /> */}
+        <Route path="/blog" element={<Blog />} />
+        
       </Routes>
     </Router>
     </div>
