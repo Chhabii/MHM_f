@@ -293,7 +293,7 @@ function Blog() {
   function getBlogs() {
     axios({
       method: 'GET',
-      url: '/apis/blog-list/',
+      url: '/blog/blog-list/',
     })
       .then((response) => {
         const data = response.data;
@@ -320,7 +320,7 @@ function Blog() {
       // Perform update if currently editing
       axios({
         method: 'PUT',
-        url: `/apis/blog-update/<str:pk>/`,
+        url: `/blog/blog-update/<str:pk>/`,
         data: formData,
       })
         .then((response) => {
@@ -341,7 +341,7 @@ function Blog() {
       // Perform create if not currently editing
       axios({
         method: 'POST',
-        url: '/apis/blog-create/',
+        url: '/blog/blog-create/',
         data: formData,
       })
         .then((response) => {
@@ -373,7 +373,7 @@ function Blog() {
     
   }
   function deleteBlog(id) {
-    axios.delete(`/apis/blog-delete/${id}/`)
+    axios.delete(`/blog/blog-delete/${id}/`)
       .then((response) => {
         getBlogs(); // Refresh the blog list after deletion
       })
