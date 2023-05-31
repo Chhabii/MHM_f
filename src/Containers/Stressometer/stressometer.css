@@ -135,3 +135,36 @@
     margin: 20px auto;
   }
 }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1vh;
+  padding: 20px;
+  box-sizing: border-box;
+  /* background: #9d8a8a; */
+  background: #040C18;
+}
+
+.form-card {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #051123;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.1);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .form-card {
+    padding: 10px;
+  }
+}

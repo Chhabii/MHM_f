@@ -1,28 +1,25 @@
-// import { Link } from 'react-router-dom';
-// import './navbar.css';
-
-// const Navbar = () => {
-//     return (
-//         <nav className="navbar">
-//             <Link to="/stressometer" className="nav-link" activeClassName="active-link">Stressometer</Link>
-//             <Link to="/doctorai" className="nav-link" activeClassName="active-link">DoctorAI</Link>
-//             <Link to="/recommend" className="nav-link" activeClassName="active-link">Recommend a Psychiatrist</Link>
-//             <Link to="/blog" className="nav-link" activeClassName="active-link">Blog</Link>
-//         </nav>
-//     );
-// };
-
-// export default Navbar;
-
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link,useNavigate } from 'react-router-dom';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
 import logo from '../../Assets/logo.png';
 
+import { AuthContext } from '../../AuthContext';
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const {user,logout} = useContext(AuthContext);
 
+  const navigate = useNavigate();
+  
+  const handlelogout =()=>{
+    logout();
+    navigate("/");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000); // delay of 1 second
+
+  }
   return (
     <div className="navbar">
       <div className="navbar-links">
@@ -32,10 +29,23 @@ const Navbar = () => {
         </Link>
         <div className="navbar-links_container">
           <p><Link to="/" className='nav-link'>Home</Link></p>
-          <p><Link to="/stressometer" className="nav-link">Stressometer</Link></p>
-          <p><Link to="/doctorai" className="nav-link">DoctorAI</Link></p>
-          <p><Link to="/recommend" className="nav-link">Recommend a Psychiatrist</Link></p>
-          <p><Link to="/blog" className="nav-link">Blog</Link></p>
+         
+          
+          {/* conditionally render login,register,logout based on user authentication status */}
+          {user===null ?(<>
+            <p><Link to="/login" className='nav-link'>Login</Link></p>
+            <p><Link to="/register" className='nav-link'>Register</Link></p>
+          </>):(
+            <>
+              <p><Link to="/stressometer" className="nav-link">Stressometer</Link></p>
+              <p><Link to="/doctorai" className="nav-link">DoctorAI</Link></p>
+              <p><Link to="/recommend" className="nav-link">Recommend a Psychiatrist</Link></p>
+              <p><Link to="/blog" className="nav-link">Blog</Link></p>
+              <p><button onClick={handlelogout} className='nav-link logout-button'>Logout</button></p>
+
+            </>           
+          )}
+
         </div>
       </div>
       <div className="navbar-menu">
@@ -44,10 +54,22 @@ const Navbar = () => {
           : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
         {toggleMenu && (
         <div className="navbar-menu_container scale-up-center">
-          <Link to="/stressometer" className="nav-link">Stressometer</Link>
-          <Link to="/doctorai" className="nav-link">DoctorAI</Link>
-          <Link to="/recommend" className="nav-link">Recommend a Psychiatrist</Link>
-          <Link to="/blog" className="nav-link">Blog</Link>
+          
+          
+          {/* conditionally render login,register,logout based on user authentication status */}
+          {user ===null ?(<>
+            <p><Link to="/login" className='nav-link'>Login</Link></p>
+            <p><Link to="/register" className='nav-link'>Register</Link></p>
+          </>):(
+            <>
+            <Link to="/stressometer" className="nav-link">Stressometer</Link>
+            <Link to="/doctorai" className="nav-link">DoctorAI</Link>
+            <Link to="/recommend" className="nav-link">Recommend a Psychiatrist</Link>
+            <Link to="/blog" className="nav-link">Blog</Link>
+            <p><button onClick={handlelogout} className='nav-link logout-button'>Logout</button></p>
+
+          </>)}
+
         </div>
         )}
       </div>
