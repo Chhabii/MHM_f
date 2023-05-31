@@ -17,7 +17,7 @@ import { AuthContext } from './AuthContext';
 axios.defaults.withCredentials = true;
 
 
-// import Blog from './Blog';
+import Blog from './Containers/Blog/Blog';
 
 function App() {
   const {user} = useContext(AuthContext);
@@ -30,7 +30,8 @@ function App() {
         <Route path="/stressometer" element={user ? <Stressometer /> : <Navigate to="/login" />} />
         <Route path="/recommend" element={user ? <Recommend /> : <Navigate to="/login" />} />
         <Route path="/doctorai" element={user ? <DoctorAI /> : <Navigate to="/login" />} />
-        {/* <Route path="/blog" element={<Blog />} /> */}
+        <Route path="/blog" element={user ? <Blog />:<Navigate to="/login" />} />
+        
         <Route path="/register" element={<Register />} />
         <Route path='/login' element={<Login />} />
 
