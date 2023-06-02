@@ -59,7 +59,7 @@ const Form = styled('form')({
   gap: "15px",
   backgroundColor:"white",
   border: "1px solid white",
-  margin: "25px",
+  // margin: "25px",
   borderRadius:"8px",
   fontcolor:"white",
   
@@ -75,6 +75,11 @@ const DoctorAI = () => {
   const [input, setInput] = useState("");
   const endOfMessages = useRef(null);
 
+
+  const getAuthToken = () =>{
+    return localStorage.getItem('token');
+  }
+
   const scrollToBottom = () => {
     endOfMessages.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -89,6 +94,7 @@ const DoctorAI = () => {
       }),
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Token ${getAuthToken()}`,
       },
     });
     const data = await response.json();

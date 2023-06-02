@@ -84,11 +84,21 @@ const Stressometer = () => {
   const handlePrevious = () => {
     setCurrentStep((prevStep) => prevStep - 1);
   };
+  const getAuthToken = () =>{
+    return localStorage.getItem('token');
+  }
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(api_url, formValues);
+      const response = await axios.post(api_url, formValues,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization":`Token ${getAuthToken()}`
+        }
+      }
+      );
       setResult(response.data);
       console.log("Prediction:", response.data.result);
     } catch (e) {
@@ -604,7 +614,6 @@ const Stressometer = () => {
               style={{
                 border: "solid 2px",
                 width: "100%",
-                onClick: "noChange",
               }}
               placeholder="Teacher Student Relationship(1-5)"
               type="number"
@@ -875,6 +884,11 @@ const Stressometer = () => {
       </div>
     </div>
   );
+
+
+ 
+  
+
 };
 
 export default Stressometer;
