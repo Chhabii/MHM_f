@@ -6,11 +6,16 @@ import './recommend.css';
 const Recommend = () => {
   const [recommendation, setRecommendation] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-
+  const getAuthToken = () =>{
+    return localStorage.getItem('token');
+  }
   useEffect(() => {
     const getRecommendation = async () => {
       try {
-        const response = await axios.get('/apis/recommend/');
+        const response = await axios.get('/apis/recommend/',{
+        headers: {
+          'Authorization': `Token ${getAuthToken()}` // replace `getAuthToken()` with your actual function to retrieve the token
+        }});
         setRecommendation(response.data.recommend);
         setIsLoading(false);
       } catch (error) {
